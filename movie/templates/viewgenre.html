@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+        <div class="container">
+        <table class="table table-success table-striped-columns table table-bordered table-hover rounded shadow mt-4">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Remove</th>
+        {%for i in data%}
+        <tr class="table-group-divider">
+            <td>{{i.genre_name}}</td>
+            <td>{{i.genre_description}}</td>
+            <td><a class="btn btn-primary" href="{%url 'updateg' i.id%}">UPDATE</a></td>
+            <td><a class="btn btn-outline-danger" href="{%url 'deleteg' i.id%}">DELETE</a></td>
+        </tr>
+        
+        
+        {%endfor%}
+    </table>
+    <div style="text-align: center; position: relative; right: 50px;">
+    <button class="btn btn-outline-secondary" type="reset">Reset</button>
+</div>
+    <div style="text-align: center; position: relative; left: 50px; bottom: 38px;">
+    <a class="btn btn-outline-secondary" href="{%url 'addg'%}">ADD</a>
+</div>
+</div>
+   
+{%endblock content%}

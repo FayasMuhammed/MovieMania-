@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+    <form action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="container mt-5">
+            <div class="rounded shadow" style=" background-color: rgb(218, 206, 201); height: 700px; padding: 30px;">
+                <h1 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Add a Movie</h1>
+        {{form}}
+        <button class="btn btn-primary mt-4" type="submit">ADD</button>
+        <button class="btn btn-outline-secondary mt-4" type="reset">Reset</button>
+    </div>
+    </div>
+    </form>
+{%endblock content%}

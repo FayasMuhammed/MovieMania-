@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-5" style="margin-left: 200px;">
+    
+    <div class="col">
+      <div class="card rounded shadow" style="width: 450px;">
+        <a class="text-decoration-none" href="{%url 'viewm'%}">
+        <img style="height: 300px; width: 450px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYn1qNBH1K8wKT4qav4u5NDg2Sq15uS-P2jA&s" class="card-img-top" alt="...">
+        <div class="card-body" >
+          <h5 style="color: black;" class="card-title">Collection of Movies</h5>
+          <p style="color: black;" class="card-text">You can find or add a movie and about in this website</p>
+        </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+        
+      <div class="card rounded shadow" style="width: 450px;">
+        <a class="text-decoration-none" href="{%url 'viewg'%}">
+        <img style="height: 300px; width: 450px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2EoGhg6oq05i79f1SFW2ezCHGad022bynkg&s" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 style="color: black;" class="card-title">Know your Genre</h5>
+          <p style="color: black;" class="card-text">You can find your favorite movie Genre in here</p>
+        </div>
+      </div>
+    </div>
+</a>
+  </div>
+{%endblock content%}
